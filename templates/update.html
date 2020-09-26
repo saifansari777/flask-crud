@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mysite.css') }}">
+	<title>Document</title>
+</head>
+<body>
+	 <div class="todo-form">
+	 	<h1 >Update</h1>
+	<form method="POST" action="./update">
+    <input class="input-text" type="text" value="{{todo.title}}" name="newtitle">
+    <textarea cols="85" rows="10" type="text"  name="newdescription">{{todo.description}}</textarea>
+      <input class="input-text" type="number" value="{{todo.Duration}} mins" name="newduration">
+    <input class="input-text" type="submit" value="Update">
+  </form>
+  </div>
+</body>
+</html>
